@@ -348,7 +348,7 @@ const AttemptExamPage = () => {
 
               <div className="space-y-3 mb-8">
                 {Object.entries(
-                  currentQuestion.question_data || {}
+                  currentQuestion?.question_data || {}
                 )
                   .filter(([key]) => key.startsWith("option"))
                   .map(([key, value]) => (
