@@ -359,12 +359,11 @@ const AttemptExamPage = () => {
                           ? "bg-emerald-50 border-emerald-300 shadow-sm"
                           : "bg-white border-gray-200 hover:border-emerald-200 hover:bg-emerald-50/30"
                       }`}
-                      onClick={() =>
-                        handleOptionSelect(
-                          currentQuestion.id,
-                          key
-                        )
-                      }
+                      onClick={() => {
+                        if (currentQuestion) {
+                          handleOptionSelect(currentQuestion.id, key);
+                        }
+                      }}
                     >
                       <div className="flex items-center">
                         <div className={`w-5 h-5 rounded-full border flex-shrink-0 mr-3 flex items-center justify-center ${
