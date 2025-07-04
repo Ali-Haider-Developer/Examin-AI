@@ -341,7 +341,9 @@ const AttemptExamPage = () => {
             {/* Question Content */}
             <div className="p-6">
               <div className="bg-gray-50 p-5 rounded-xl mb-6 border border-gray-100">
-                <p className="text-lg text-gray-800 font-medium">{currentQuestion.statement}</p>
+                <p className="text-lg text-gray-800 font-medium">
+                  {currentQuestion?.statement || "No question available."}
+                </p>
               </div>
 
               <div className="space-y-3 mb-8">
